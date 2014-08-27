@@ -1,25 +1,25 @@
-	<?php get_sidebar( 'footer' ); ?>
+	<?php 
+	if ( !(is_page(21) ) ) {
+	get_sidebar( 'footer' ); 
+	}?>
 
 	<div id="footer-bottom">
 		<div class="container clearfix">
-			<?php
-				$menu_class = 'bottom-nav';
-				$footerNav = '';
-
-				if ( function_exists( 'wp_nav_menu' ) ) $footerNav = wp_nav_menu( array( 'theme_location' => 'footer-menu', 'container' => '', 'fallback_cb' => '', 'menu_class' => $menu_class, 'echo' => false, 'depth' => '1' ) );
-				if ( '' == $footerNav ) show_page_menu( $menu_class );
-				else echo( $footerNav );
-			?>
-
-			<p id="copyright"><?php printf( __( 'Designed by %1$s | Powered by %2$s', 'Fusion' ), '<a href="http://www.elegantthemes.com" title="Premium WordPress Themes">Elegant Themes</a>', '<a href="http://www.wordpress.org">WordPress</a>' ); ?></p>
+			<!--<uo>
+			<h3 style="color:#c6c6c6">Contato</h3>
+			<p style="color:#FFFFFF">E-mail: contato@occontabilidade.com.br</p>
+			<p style="color:#FFFFFF">Telefone: (85) 3243-2292</p>
+			<p style="color:#FFFFFF">Endereço: Rua Azevedo Bolão 818
+			60455160 Fortaleza, Brasil</p>
+			</uo>-->
+		</div>
 		<div class="container2">
 			<p style="float:left; color:#FFFFFF">Desenvolvido por</p>
 			<a href="http://acens.com.br/" target="_blank">
 				<img src="http://localhost/oc/wp-content/uploads/2014/08/Logo-Footer-Branco1.png" width="80">
 			</a>
 		</div>
-		</div> <!-- end .container -->
-	</div> <!-- end #footer-bottom -->
+	</div>
 
 	<?php wp_footer(); ?>
 </body>
